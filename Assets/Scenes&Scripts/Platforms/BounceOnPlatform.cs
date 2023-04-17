@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpringBounce : MonoBehaviour
+public class BounceOnPlatform : MonoBehaviour
 {
-    private const float BounceForce = 1700f;
+    [SerializeField] private float bounceForce = 1000f;
 
-    void Start()
+    private void Start()
     {
     }
 
-    void Update()
+    private void Update()
     {
     }
 
@@ -18,7 +18,7 @@ public class SpringBounce : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * BounceForce);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector3.up * bounceForce);
         }
     }
 }
