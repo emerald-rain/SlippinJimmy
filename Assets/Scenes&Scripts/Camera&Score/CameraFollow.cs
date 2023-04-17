@@ -2,28 +2,27 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform playerTransform;
-    public float yOffset = 2f;
-    public float smoothTime = 0.3f;
+    public Transform player;
+    public float smoothness = 1f;
 
-    private Vector3 velocity = Vector3.zero;
+    private Vector3 offset;
+    private float maxYPosition;
 
-    private void Start()
+    void Start()
     {
+        offset = transform.position - player.position;
+        maxYPosition = transform.position.y;
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-            FollowPlayer();
-    }
+        Vector3 targetPosition = player.position + offset;
+        targetPosition.x = transform.position.x;
 
-    private void FollowPlayer()
-    {
-        Vector3 targetPosition = new Vector3(transform.position.x, playerTransform.position.y + yOffset, transform.position.z);
+        targetPosition.y = Mathf.Max(targetPosition.y, maxYPosition);
 
-        if (targetPosition.y > transform.position.y)
-        {
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-        }
+        maxYPosition = Mathf.Max(maxYPosition, transform.position.y);
+
+        transform.position = Vector3.Lerp(transform.position, targetPosition, smoothness * Time.fixedDeltaTime);
     }
 }
