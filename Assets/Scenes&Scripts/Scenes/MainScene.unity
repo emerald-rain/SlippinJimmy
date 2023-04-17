@@ -285,8 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073554ba86c7faf409adeae375cd4464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 14986590}
-  fallDistance: 30
+  player: {fileID: 14986594}
+  mainCamera: {fileID: 519420031}
 --- !u!1 &510810488
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,9 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5519a741b1724aa44adf0e6ffb9addf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 14986594}
-  yOffset: 2
-  smoothTime: 0.25
+  player: {fileID: 14986594}
+  smoothness: 4
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,31 +530,11 @@ MonoBehaviour:
     chance: 1
   - prefab: {fileID: 1062221271333503133, guid: ce14b7ee373f56a43bc23c9362c0b1f8, type: 3}
     chance: 0.2
-  - prefab: {fileID: 2384439585450014770, guid: 0ed0ad7c11eac7045845452b10f7e3c3, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 8337805794743204566, guid: 484c8fca721b1444aab6dfdbd02111be, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 3218314734368779344, guid: 9561344ecb94d774f80ce6a09ed72dac, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 5428205626945791036, guid: 7589b94d9f86e3642923ce7dfde67e34, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 8864254171410486492, guid: 22b01655f55c5044cbcfd0ee2962ed30, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 7875251975138241696, guid: 3d4deaa84ed9e6f42a42f86c095f4e74, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 709858226872361195, guid: 5bc34bb59dd0e5b48993174a07db2abd, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 6873850857239186119, guid: b9da8c67855be084bbb0fd7c2fef066d, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 8621458519446563347, guid: 66356f18f3ad92540984d0bfbeb51624, type: 3}
-    chance: 0.015
-  - prefab: {fileID: 4949732585587340749, guid: e61ac8417859530469fa7e28f26df2a1, type: 3}
-    chance: 0.015
-  poolSize: 500
-  platformDistance: 2.5
+  poolSize: 100
+  platformDistance: 1
   levelWidth: 8
-  minYOffset: 16.4
-  maxYOffset: 20
+  minYOffset: 20
+  maxYOffset: 50
 --- !u!1 &1069820589
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1626421357
 MonoBehaviour:
   m_ObjectHideFlags: 0
