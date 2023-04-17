@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1510427240311320073}
   - component: {fileID: 4646880712119312460}
-  - component: {fileID: 7267408990238420582}
+  - component: {fileID: 8095620804416470661}
   m_Layer: 0
   m_Name: Cloud-0
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2136d5fc17818e54491a9ffe6ed6411e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7267408990238420582
+--- !u!114 &8095620804416470661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,5 +97,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 223a2c6c712bd834c820e615af6ce635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTransparency: 0.5
-  maxTransparency: 0.8
