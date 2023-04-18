@@ -530,11 +530,19 @@ MonoBehaviour:
     chance: 1
   - prefab: {fileID: 1062221271333503133, guid: ce14b7ee373f56a43bc23c9362c0b1f8, type: 3}
     chance: 0.2
+  platformDistanceChanges:
+  - yPosition: 0
+    newPlatformDistance: 1
+  - yPosition: 1000
+    newPlatformDistance: 2
+  - yPosition: 2000
+    newPlatformDistance: 3
+  - yPosition: 4000
+    newPlatformDistance: 4
+  - yPosition: 6000
+    newPlatformDistance: 4.1
   poolSize: 100
-  platformDistance: 1
   levelWidth: 8
-  minYOffset: 20
-  maxYOffset: 50
 --- !u!1 &1069820589
 GameObject:
   m_ObjectHideFlags: 0

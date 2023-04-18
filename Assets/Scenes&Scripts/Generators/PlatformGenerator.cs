@@ -13,15 +13,23 @@ public class PlatformGenerator : MonoBehaviour
         public float chance;
     }
 
+    [System.Serializable]
+    public struct PlatformDistanceChange
+    {
+        public float yPosition;
+        public float newPlatformDistance;
+    }
+
     public List<PlatformInfo> platforms;
+    public List<PlatformDistanceChange> platformDistanceChanges;
     public int poolSize = 50;
-    public float platformDistance = 2f;
     public float levelWidth = 5f;
-    public float minYOffset = 20f;
-    public float maxYOffset = 50f;
 
     private Queue<GameObject> platformPool;
     private List<GameObject> activePlatforms;
+    private float platformDistance = 1f;
+    private float minYOffset = 30f;
+    private float maxYOffset = 30f;
     private float initialPlatformY = 0f;
     private float lastPlatformY;
 
@@ -36,6 +44,15 @@ public class PlatformGenerator : MonoBehaviour
     void Update()
     {
         float playerY = player.transform.position.y;
+
+        // Update platformDistance based on Y position changes
+        foreach (PlatformDistanceChange distanceChange in platformDistanceChanges)
+        {
+            if (playerY >= distanceChange.yPosition)
+            {
+                platformDistance = distanceChange.newPlatformDistance;
+            }
+        }
 
         // Generate platforms above 'Y character plus 50'
         while (lastPlatformY < playerY + maxYOffset)
