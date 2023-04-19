@@ -30,7 +30,7 @@ public class PlatformGenerator : MonoBehaviour
     private float platformDistance = 1f;
     private float minYOffset = 30f;
     private float maxYOffset = 30f;
-    private float initialPlatformY = 0f;
+    private float initialPlatformY = -10f;
     private float lastPlatformY;
 
     void Start()
