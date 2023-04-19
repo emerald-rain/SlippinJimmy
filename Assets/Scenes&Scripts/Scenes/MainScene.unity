@@ -524,15 +524,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286914cf5f498cf4b947b89792c069cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 14986590}
-  platforms:
-  - prefab: {fileID: 4635567048742089365, guid: 55e6826294e6eab40b937915c4977e52, type: 3}
-    chance: 1
-  platformDistanceChanges:
-  - yPosition: 0
-    newPlatformDistance: 20
-  poolSize: 100
-  levelWidth: 0.001
+  settings:
+  - levelY: 0
+    prebuffData:
+    - prebuffPrefab: {fileID: 4635567048742089365, guid: 55e6826294e6eab40b937915c4977e52, type: 3}
+      chance: 1
+    - prebuffPrefab: {fileID: 4635567048742089365, guid: 4abb65be124b6594b94445d5046dafed, type: 3}
+      chance: 1
+  - levelY: 200
+    prebuffData:
+    - prebuffPrefab: {fileID: 4635567048742089365, guid: 0793f3dba8a32e242a86d345eebdbca7, type: 3}
+      chance: 1
+    - prebuffPrefab: {fileID: 4635567048742089365, guid: ac74e7fa03bb8b24c9ace26dc8a48390, type: 3}
+      chance: 1
 --- !u!1 &1069820589
 GameObject:
   m_ObjectHideFlags: 0
