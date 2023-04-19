@@ -526,23 +526,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 14986590}
   platforms:
-  - prefab: {fileID: 4877419128400906633, guid: 6bc134339232f4443ba453ee4dcd7cdc, type: 3}
+  - prefab: {fileID: 4635567048742089365, guid: 55e6826294e6eab40b937915c4977e52, type: 3}
     chance: 1
-  - prefab: {fileID: 1062221271333503133, guid: ce14b7ee373f56a43bc23c9362c0b1f8, type: 3}
-    chance: 0.2
   platformDistanceChanges:
   - yPosition: 0
-    newPlatformDistance: 1
-  - yPosition: 1000
-    newPlatformDistance: 2
-  - yPosition: 2000
-    newPlatformDistance: 3
-  - yPosition: 4000
-    newPlatformDistance: 4
-  - yPosition: 6000
-    newPlatformDistance: 4.1
+    newPlatformDistance: 20
   poolSize: 100
-  levelWidth: 8
+  levelWidth: 0.001
 --- !u!1 &1069820589
 GameObject:
   m_ObjectHideFlags: 0
